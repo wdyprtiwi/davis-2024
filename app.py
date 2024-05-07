@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.header('Hari yang Paling Banyak Menerima Tip')
+st.header('Jumlah Tip')
 
 # reading the database
 url = "https://raw.githubusercontent.com/wdyprtiwi/davis-2024/main/tips.csv"
@@ -23,4 +23,16 @@ plt.ylabel('Tip')
 plt.legend()
 
 # Show plot
+st.pyplot()
+
+# diagram lineplot
+st.header('Total Tagihan Berdasarkan Jenis Kelamin')
+# draw lineplot
+sns.lineplot(x="sex", y="total_bill", data=data)
+
+# setting the title using Matplotlib
+plt.title('Title using Matplotlib Function')
+
+plt.show()
+
 st.pyplot()
