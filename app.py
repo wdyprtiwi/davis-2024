@@ -20,9 +20,6 @@ plt.bar(data['day'], data['tip'])
 plt.xlabel('Day')
 plt.ylabel('Tip')
 
-# Show legend
-plt.legend()
-
 # Show plot
 st.pyplot()
 
@@ -33,4 +30,4 @@ st.header('Total Tagihan Berdasarkan Jenis Kelamin')
 # draw lineplot
 sns.lineplot(x="sex", y="total_bill", data=data)
 
-st.pyplot()
+st.pyplot(bbox_inches='tight')
