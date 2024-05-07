@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.header('Tip yang diterima pada setiap harinya')
+
 # reading the database
 url = "https://raw.githubusercontent.com/wdyprtiwi/davis-2024/main/tips.csv"
 data = pd.read_csv(url)
