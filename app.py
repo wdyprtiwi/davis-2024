@@ -25,14 +25,11 @@ plt.legend()
 # Show plot
 st.pyplot()
 
+
 # diagram lineplot
 st.header('Total Tagihan Berdasarkan Jenis Kelamin')
+
 # draw lineplot
 sns.lineplot(x="sex", y="total_bill", data=data)
-
-# setting the title using Matplotlib
-plt.title('Title using Matplotlib Function')
-
-plt.show()
 
 st.pyplot()
