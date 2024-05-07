@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 url = "https://raw.githubusercontent.com/wdyprtiwi/davis-2024/main/tips.csv"
 data = pd.read_csv(url)
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Scatter plot with day against tip
 plt.plot(data['tip'], label='Tip')
 plt.plot(data['size'], label='Size')
