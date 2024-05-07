@@ -1,9 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 # reading the database
-url = ""
+url = "https://github.com/wdyprtiwi/davis-2024/blob/main/tips.csv"
 data = pd.read_csv(url)
 
 # Scatter plot with day against tip
