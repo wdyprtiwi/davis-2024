@@ -7,20 +7,18 @@ url = "https://raw.githubusercontent.com/wdyprtiwi/davis-2024/main/tips.csv"
 data = pd.read_csv(url)
 
 # Scatter plot with day against tip
-# fig = px.scatter(data, x='day', y='tip', title='Scatter Plot', labels={'day': 'Day', 'tip': 'Tip'})
-
-# Scatter plot with day against tip
-plt.plot(data['tip'])
-plt.plot(data['size'])
+plt.plot(data['tip'], label='Tip')
+plt.plot(data['size'], label='Size')
 
 # Adding Title to the Plot
 plt.title("Scatter Plot")
 
 # Setting the X and Y labels
 plt.xlabel('Day')
-plt.ylabel('Tip')
+plt.ylabel('Value')
 
-plt.show()
+# Show legend
+plt.legend()
 
 # Show plot
-st.plotly_chart(fig)
+st.pyplot()
