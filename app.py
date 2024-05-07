@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.header('Jumlah Tip')
+st.header('Jumlah Tip Berdarkan Hari')
 
 # reading the database
 url = "https://raw.githubusercontent.com/wdyprtiwi/davis-2024/main/tips.csv"
