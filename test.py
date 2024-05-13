@@ -2,25 +2,10 @@ import streamlit as st
 import pymysql
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
-def connect_db():
-    return pymysql.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="sakila",
-        cursorclass=pymysql.cursors.DictCursor
-    )
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
-def get_data():
-    conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute("SELECT c.customer_id as cus_id, count(r.rental_id) as jml_order FROM customer c join rental r on c.customer_id = r.customer_id group by c.customer_id order by jml_order")
-    data = cursor.fetchall()
-    conn.close()
-    return data
+st.bar_chart(chart_data)
 
-data = get_data()
-
-st.write("Data dari database:")
-st.write(data)
+conn = st.connection("mydb", type="sql", autocommit=True)
